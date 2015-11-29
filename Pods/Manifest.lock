@@ -1,0 +1,25 @@
+PODS:
+  - Alamofire (3.1.3)
+  - Kingfisher (1.8.2)
+  - LocationPickerView (1.2.0)
+  - PageMenu (1.2.8)
+  - SVPulsingAnnotationView (0.3.0)
+  - SWRevealViewController (2.3.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.1)
+  - Kingfisher (~> 1.8)
+  - LocationPickerView (~> 1.2)
+  - PageMenu (~> 1.2)
+  - SVPulsingAnnotationView (~> 0.3)
+  - SWRevealViewController (~> 2.3)
+
+SPEC CHECKSUMS:
+  Alamofire: 9f93b56389e48def9220dd57d1f44b1927229a5a
+  Kingfisher: b39315e9dbed7e8ffe73a9ca1be2ee006d1d57e4
+  LocationPickerView: 25a4e4d6fe092e93aba759b723a28747d76b388f
+  PageMenu: 703e82e173f54a4626ab88fcdca7703ee52e0cbe
+  SVPulsingAnnotationView: f1a8dc7a57ebb5fa231d0ef8b0da59a250005511
+  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
+
+COCOAPODS: 0.39.0

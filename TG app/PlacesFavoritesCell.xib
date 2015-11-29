@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </mutableArray>
+        <mutableArray key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="KGk-i7-Jjw" customClass="PlacesFavoritesCell" customModule="TG_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="1" width="320" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-back.png" translatesAutoresizingMaskIntoConstraints="NO" id="yZn-y5-alz">
+                        <rect key="frame" x="-1" y="-3" width="320" height="90"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fav.png" translatesAutoresizingMaskIntoConstraints="NO" id="h0J-15-EsD">
+                        <rect key="frame" x="153" y="59" width="14" height="13"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="train.png" translatesAutoresizingMaskIntoConstraints="NO" id="OWn-y5-e1f">
+                        <rect key="frame" x="12" y="14" width="56" height="56"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptd-bR-RYq">
+                        <rect key="frame" x="74" y="37" width="246" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="afL-XP-vfN"/>
+                        </constraints>
+                        <string key="text">м. Октябрьская, ул. Крымский Вал, д. 9
+</string>
+                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="11"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="route.png" translatesAutoresizingMaskIntoConstraints="NO" id="BjI-rQ-ttq">
+                        <rect key="frame" x="82" y="59" width="10" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="M20-82-jDX"/>
+                            <constraint firstAttribute="height" constant="13" id="qOg-lf-3Uy"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Парк Горького" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLE-pf-JuV">
+                        <rect key="frame" x="74" y="14" width="168" height="21"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share.png" translatesAutoresizingMaskIntoConstraints="NO" id="W3h-Up-aX0">
+                        <rect key="frame" x="243" y="59" width="13" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="13" id="LOS-ii-JJl"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="h0J-15-EsD" firstAttribute="leading" secondItem="BjI-rQ-ttq" secondAttribute="trailing" constant="61" id="1C7-4h-SLC"/>
+                    <constraint firstItem="OWn-y5-e1f" firstAttribute="centerY" secondItem="yZn-y5-alz" secondAttribute="centerY" id="5Av-la-IwS"/>
+                    <constraint firstItem="hLE-pf-JuV" firstAttribute="top" secondItem="OWn-y5-e1f" secondAttribute="top" id="7ri-mU-I3M"/>
+                    <constraint firstItem="hLE-pf-JuV" firstAttribute="leading" secondItem="OWn-y5-e1f" secondAttribute="trailing" constant="6" id="8e9-fn-ZM9"/>
+                    <constraint firstAttribute="trailing" secondItem="Ptd-bR-RYq" secondAttribute="trailing" id="EWl-1E-L0s"/>
+                    <constraint firstItem="W3h-Up-aX0" firstAttribute="top" secondItem="h0J-15-EsD" secondAttribute="top" id="KoJ-Tc-pcW"/>
+                    <constraint firstItem="OWn-y5-e1f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="4" id="R4v-t0-YTn"/>
+                    <constraint firstItem="BjI-rQ-ttq" firstAttribute="bottom" secondItem="h0J-15-EsD" secondAttribute="bottom" id="RBx-o4-EJB"/>
+                    <constraint firstItem="W3h-Up-aX0" firstAttribute="leading" secondItem="h0J-15-EsD" secondAttribute="trailing" constant="76" id="Rl6-dr-MKP"/>
+                    <constraint firstItem="yZn-y5-alz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="-3" id="TAP-LM-oxk"/>
+                    <constraint firstItem="OWn-y5-e1f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="UDh-lI-X6X"/>
+                    <constraint firstItem="BjI-rQ-ttq" firstAttribute="leading" secondItem="OWn-y5-e1f" secondAttribute="trailing" constant="14" id="UbP-69-9Q0"/>
+                    <constraint firstItem="hLE-pf-JuV" firstAttribute="leading" secondItem="Ptd-bR-RYq" secondAttribute="leading" id="V7d-ST-bRB"/>
+                    <constraint firstItem="BjI-rQ-ttq" firstAttribute="top" secondItem="h0J-15-EsD" secondAttribute="top" id="Ve9-ox-jef"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="W3h-Up-aX0" secondAttribute="trailing" constant="56" id="XV5-db-rMX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="yZn-y5-alz" secondAttribute="trailing" constant="-7" id="ZEt-dC-96S"/>
+                    <constraint firstItem="h0J-15-EsD" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="bmf-4X-UmP"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="BjI-rQ-ttq" secondAttribute="bottom" constant="4" id="nNO-jV-ZE6"/>
+                    <constraint firstAttribute="bottom" secondItem="yZn-y5-alz" secondAttribute="bottom" constant="-3" id="oMZ-Pw-TxQ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="hLE-pf-JuV" secondAttribute="trailing" constant="70" id="qYp-Vg-TO1"/>
+                    <constraint firstItem="Ptd-bR-RYq" firstAttribute="top" secondItem="hLE-pf-JuV" secondAttribute="bottom" constant="2" id="rb5-LL-FJb"/>
+                    <constraint firstItem="yZn-y5-alz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-9" id="wEp-Tp-rEP"/>
+                    <constraint firstItem="BjI-rQ-ttq" firstAttribute="top" secondItem="Ptd-bR-RYq" secondAttribute="bottom" constant="8" symbolic="YES" id="y53-Xk-YnP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="address" destination="Ptd-bR-RYq" id="lZL-vS-g1Z"/>
+                <outlet property="logo" destination="OWn-y5-e1f" id="tQ9-Ke-cYQ"/>
+                <outlet property="title" destination="hLE-pf-JuV" id="feL-xw-n3f"/>
+            </connections>
+            <point key="canvasLocation" x="262" y="393.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="card-back.png" width="320" height="77"/>
+        <image name="fav.png" width="15" height="14"/>
+        <image name="route.png" width="8" height="15"/>
+        <image name="share.png" width="12" height="13"/>
+        <image name="train.png" width="47" height="47"/>
+    </resources>
+</document>
