@@ -28,8 +28,8 @@ import Alamofire
         }
         
         override func awakeFromNib() {
-            self.contentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DLNavigationViewController") as! UIViewController
-            self.menuViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DLMenuViewController") as! UIViewController
+            self.contentViewController = self.storyboard!.instantiateViewControllerWithIdentifier("DLNavigationViewController") as! UIViewController
+            self.menuViewController = self.storyboard!.instantiateViewControllerWithIdentifier("DLMenuViewController") as! UIViewController
         }
 }
 

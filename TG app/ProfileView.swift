@@ -123,7 +123,7 @@ class ProfileView: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func isRowZeroVisible() -> Bool {
-        var indexes:NSArray = tableView.indexPathsForVisibleRows()!
+        var indexes:NSArray = tableView.indexPathsForVisibleRows!
         for item in indexes {
             var index = item as! NSIndexPath
             if (index.row == 0) {
@@ -164,7 +164,7 @@ class ProfileView: UIViewController, UITableViewDelegate, UITableViewDataSource
             if (scrollView.contentOffset.y < a || scrollView.contentOffset.y < 40)
             {
                 //scrollView.setContentOffset(CGPointMake(0, a), animated:false)
-                println("UP")
+                print("UP")
                 showBack()
             } else
             {
@@ -172,7 +172,7 @@ class ProfileView: UIViewController, UITableViewDelegate, UITableViewDataSource
                 {
                     hideBack()
                 }
-                println("DOWN")
+                print("DOWN")
             }
         }
     
@@ -180,7 +180,7 @@ class ProfileView: UIViewController, UITableViewDelegate, UITableViewDataSource
     
         func scrollViewWillBeginDragging(scrollView: UIScrollView) {
             a = scrollView.contentOffset.y
-            println(a)
+            print(a)
         }
     
     

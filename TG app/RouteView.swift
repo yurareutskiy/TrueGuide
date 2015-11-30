@@ -25,7 +25,7 @@ class RouteView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.automaticallyAdjustsScrollViewInsets = false
         self.tableView.backgroundColor = UIColor.clearColor()
         // Do any additional setup after loading the view.
-        println(Info)
+        print(Info)
         var fields:NSMutableDictionary = Info["message"] as! NSMutableDictionary
         fields2 = fields["fields"] as! NSMutableDictionary
         fields3 = Info["places"] as! Array<String>
@@ -82,7 +82,7 @@ class RouteView: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBAction func iamGoing(sender: AnyObject) {
         var fields:NSMutableDictionary = Info["message"] as! NSMutableDictionary
-        println(fields["pk"] as! Double)
+        print(fields["pk"] as! Double)
         
     }
     /*

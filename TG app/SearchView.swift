@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PageMenu
 
 class SearchView: UIViewController, UITextFieldDelegate {
 
@@ -136,7 +137,7 @@ class SearchView: UIViewController, UITextFieldDelegate {
         for n in JSON {
             let f:NSDictionary = n.valueForKey("fields") as! NSDictionary
             let name:String = f.valueForKey("title") as! String
-            if (name.lowercaseString.rangeOfString(sender.text.lowercaseString, options: NSStringCompareOptions.allZeros, range: nil, locale: nil) != nil){
+            if (name.lowercaseString.rangeOfString(sender.text!.lowercaseString, options: NSStringCompareOptions(), range: nil, locale: nil) != nil){
                 tempJ.addObject(n)
                 
             }
@@ -315,7 +316,7 @@ class SearchView: UIViewController, UITextFieldDelegate {
                 var Route:RouteView = segue.destinationViewController as! RouteView
                 Route.Info = self.Info
         default:
-            println()
+            print("")
 
         }
         

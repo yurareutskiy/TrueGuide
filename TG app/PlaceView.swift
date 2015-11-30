@@ -20,7 +20,7 @@ class PlaceView: UIViewController {
     internal var Info:NSDictionary = NSDictionary()
     override func viewDidLoad() {
         super.viewDidLoad()
-        println(Info)
+        print(Info)
         var fields:NSMutableDictionary = Info["message"] as! NSMutableDictionary
         var fields2:NSMutableDictionary = fields["fields"] as! NSMutableDictionary
         self.titleL.text = fields2["title"] as? String
@@ -43,19 +43,22 @@ class PlaceView: UIViewController {
     }
     
     @IBAction func favadd(sender: AnyObject) {
-        println(NSUserDefaults.standardUserDefaults().dictionaryRepresentation())
+        print(NSUserDefaults.standardUserDefaults().dictionaryRepresentation())
         let userid:Double = NSUserDefaults.standardUserDefaults().valueForKey("userid") as! Double
-        println("userid: \(userid), placeid: \(placeid)")
+        print("userid: \(userid), placeid: \(placeid)")
         let serverUrl = NSUserDefaults.standardUserDefaults().valueForKey("serverUrl") as! String
         var JSON:NSMutableDictionary = NSMutableDictionary()
         var Str:String = "http://\(serverUrl)/api/likeplace"
         var params = ["userid":userid,"placeid":placeid]
-        println(Str)
+        print(Str)
         Alamofire.request(.GET, Str, parameters:params).responseJSON() {
-            (_, _, data, _) in
-            if data != nil {
-                JSON = data! as! NSMutableDictionary
-                println(JSON["response"])
+//            (_, _, data, _) in
+//            if data != nil {
+//                JSON = data! as! NSMutableDictionary
+            data in
+            if data.result.value != nil {
+                JSON = data.result.value as! NSMutableDictionary
+                print(JSON["response"])
                 if JSON["response"] as! String == "added" {
                 let alertController = UIAlertController(title: "", message:
                     "Место добавлено в закладки", preferredStyle: UIAlertControllerStyle.Alert)
@@ -70,13 +73,16 @@ class PlaceView: UIViewController {
                     self.presentViewController(alertController, animated: true, completion: nil)
                 }
                 var st = NSUserDefaults.standardUserDefaults().valueForKey("userid") as! Double
-                println("USERID: \(st)")
+                print("USERID: \(st)")
                 var params = ["id":st]
                 Alamofire.request(.GET, "http://\(serverUrl)/api/getfav", parameters:params).responseJSON() {
-                    (_, _, data, _) in
-                    if data != nil {
-                        println("4:\(data)")
-                        NSUserDefaults.standardUserDefaults().setValue(data, forKey: "favplaces")
+//                    (_, _, data, _) in
+//                    if data != nil {
+                    data in
+                    if data.result.value != nil {
+                        print("4:\(data)")
+//                        NSUserDefaults.standardUserDefaults().setValue(data, forKey: "favplaces")
+                        NSUserDefaults.standardUserDefaults().setValue(data.result.value, forKey: "favplaces")
                     }
                 }
 

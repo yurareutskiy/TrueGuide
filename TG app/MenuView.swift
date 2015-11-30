@@ -34,7 +34,7 @@ class MenuView: UIViewController {
         let nvc = self.mainNavigationController()
         if let hamburguerViewController = self.findHamburguerViewController() {
             hamburguerViewController.hideMenuViewControllerWithCompletion({ () -> Void in
-                nvc.visibleViewController.performSegueWithIdentifier(self.seguesArray[sender.tag], sender: nil)
+                nvc.visibleViewController!.performSegueWithIdentifier(self.seguesArray[sender.tag], sender: nil)
                 hamburguerViewController.contentViewController = nvc
             })
         }

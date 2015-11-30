@@ -9,6 +9,7 @@
 import UIKit
 import QuartzCore
 import Alamofire
+import MapKit
 
 class Map: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate{
 
@@ -68,7 +69,7 @@ class Map: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrol
         var cell1: FirstCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 0)) as! FirstCell
         var fields:NSMutableDictionary = JSON[0]["fields"] as! NSMutableDictionary
         titleLa = fields["title"] as! String
-        println(titleLa)
+        print(titleLa)
         adress = cell1.adress.text!
         icon = cell1.icon.image!
     }
@@ -160,12 +161,12 @@ class Map: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrol
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println(titleLa)
+        print(titleLa)
         switch indexPath.row{
         case 0:
-            println("MapSelected")
+            print("MapSelected")
         case 1:
-            println("First")
+            print("First")
             if !opened{
                 animateCells()
             } else {
@@ -176,7 +177,7 @@ class Map: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrol
                 animateCells()
             }
         default:
-            println("Other")
+            print("Other")
             //if disappeared{
                 
             //} else {

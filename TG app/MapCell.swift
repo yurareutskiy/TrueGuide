@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import SVPulsingAnnotationView
 
 class MapCell: UITableViewCell, MKMapViewDelegate, CLLocationManagerDelegate {
 
@@ -43,15 +44,15 @@ class MapCell: UITableViewCell, MKMapViewDelegate, CLLocationManagerDelegate {
     func mapViewWillStartLocatingUser(mapView: MKMapView!) {
         var status: CLAuthorizationStatus = CLLocationManager.authorizationStatus()
         if status == CLAuthorizationStatus.NotDetermined {
-            println("not determined")
+            print("not determined")
             location.requestWhenInUseAuthorization()
         } else if status == CLAuthorizationStatus.Denied {
-            println("Denied")
+            print("Denied")
             locateB.setImage(UIImage(named: "locateicoFailed"), forState: UIControlState.Normal)
             locateB.setImage(UIImage(named: "locateicoFailed"), forState: UIControlState.Selected)
         } else if status == CLAuthorizationStatus.AuthorizedWhenInUse
         {
-            println("Allowed")
+            print("Allowed")
             locateB.setImage(UIImage(named: "locateico"), forState: UIControlState.Normal)
             locateB.setImage(UIImage(named: "locateico"), forState: UIControlState.Selected)
         }

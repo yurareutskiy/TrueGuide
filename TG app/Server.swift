@@ -18,9 +18,11 @@ class Server: NSObject {
 
         var JSON:NSMutableArray = NSMutableArray()
         Alamofire.request(.GET, "http://\(serverUrl)/api/").responseJSON() {
-            (_, _, data, _) in
-            JSON = data! as! NSMutableArray
-            println(JSON[0]["fields"])
+//            (_, _, data, _) in
+//            JSON = data! as! NSMutableArray
+            data in
+            JSON = data.result.value as! NSMutableArray
+            print(JSON[0]["fields"])
         }
     }
     
@@ -29,12 +31,14 @@ class Server: NSObject {
         var JSON:NSMutableDictionary = NSMutableDictionary()
         var Str:String = "http://\(serverUrl)/api/regfb"
         var params = ["id":id,"name":firstName, "lastname":lastName]
-        println(Str)
+        print(Str)
         Alamofire.request(.GET, Str, parameters:params).responseJSON() {
-            (_, _, data, _) in
-            if data != nil {
-                JSON = data! as! NSMutableDictionary
-                println(JSON["response"])
+//            (_, _, data, _) in
+//            if data != nil {
+            data in
+            if data.result.value != nil {
+                JSON = data.result.value as! NSMutableDictionary
+                print(JSON["response"])
                 var t = JSON["response"] as! Double
                 NSUserDefaults.standardUserDefaults().setValue(t, forKey: "userid")
             }
@@ -44,8 +48,9 @@ class Server: NSObject {
     
     func getPlaces(){
         Alamofire.request(.GET, "http://\(serverUrl)/api/getplaces").responseJSON() {
-            (_, _, data, error) in
-            var JSON = data as? NSMutableArray
+//            (_, _, data, error) in
+            data in
+            var JSON = data.result.value as? NSMutableArray
             
         }
     }
@@ -55,12 +60,14 @@ class Server: NSObject {
         var JSON:NSMutableDictionary = NSMutableDictionary()
         var Str:String = "http://\(serverUrl)/api/likeplace"
         var params = ["userid":userid,"placeid":placeid]
-        println(Str)
+        print(Str)
         Alamofire.request(.GET, Str, parameters:params).responseJSON() {
-            (_, _, data, _) in
-            if data != nil {
-                JSON = data! as! NSMutableDictionary
-                println(JSON["response"])
+//            (_, _, data, _) in
+//            if data != nil {
+            data in
+            if data.result.value != nil {
+                JSON = data.result.value as! NSMutableDictionary
+                print(JSON["response"])
             }
             
         }

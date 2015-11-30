@@ -49,38 +49,52 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         print("User Logged In" )
         let serverUrl = NSUserDefaults.standardUserDefaults().valueForKey("serverUrl")!
         Alamofire.request(.GET, "http://\(serverUrl)/api/alive").responseJSON() {
-            (_, _, data, error) in
-            if data != nil {
-                println("This is where you perform a segue")
+//            (_, _, data, error) in
+            data in
+//            if data != nil {
+            if data.result.value != nil {
+                print("This is where you perform a segue")
                 Alamofire.request(.GET, "http://\(serverUrl)/api/getplaces").responseJSON() {
-                    (_, _, data, error) in
-                    if data != nil {
-                        println("1:\(data)")
-                        NSUserDefaults.standardUserDefaults().setValue(data, forKey: "places")
+//                    (_, _, data, error) in
+                    data in
+//                    if data != nil {
+                    if data.result.value != nil {
+                        print("1:\(data)")
+//                        NSUserDefaults.standardUserDefaults().setValue(data, forKey: "places")
+                        NSUserDefaults.standardUserDefaults().setValue(data.result.value, forKey: "places")
                     }
                 }
                 Alamofire.request(.GET, "http://\(serverUrl)/api/getroutes").responseJSON() {
-                    (_, _, data, error) in
-                    if data != nil {
-                        println("2:\(data)")
-                        NSUserDefaults.standardUserDefaults().setValue(data, forKey: "routes")
+//                    (_, _, data, error) in
+//                    if data != nil {
+                    daat in
+                    if data.result.value != nil {
+                        print("2:\(data)")
+//                        NSUserDefaults.standardUserDefaults().setValue(data, forKey: "routes")
+                        NSUserDefaults.standardUserDefaults().setValue(data.result.value, forKey: "routes")
                     }
                 }
                 Alamofire.request(.GET, "http://\(serverUrl)/api/getcategories").responseJSON() {
-                    (_, _, data, error) in
-                    if data != nil {
-                        println("3:\(data)")
-                        NSUserDefaults.standardUserDefaults().setValue(data, forKey: "categories")
+//                    (_, _, data, error) in
+//                    if data != nil {
+                    data in
+                    if data.result.value != nil {
+                        print("3:\(data)")
+//                        NSUserDefaults.standardUserDefaults().setValue(data, forKey: "categories")
+                        NSUserDefaults.standardUserDefaults().setValue(data.result.value, forKey: "categories")
                     }
                 }
                 var st = NSUserDefaults.standardUserDefaults().valueForKey("userid") as! Double
-                println("USERID: \(st)")
+                print("USERID: \(st)")
                 var params = ["id":st]
                 Alamofire.request(.GET, "http://\(serverUrl)/api/getfav", parameters:params).responseJSON() {
-                    (_, _, data, _) in
-                    if data != nil {
-                        println("4:\(data)")
-                        NSUserDefaults.standardUserDefaults().setValue(data, forKey: "favplaces")
+//                    (_, _, data, _) in
+//                    if data != nil {
+                    data in
+                    if data.result.value != nil {
+                        print("4:\(data)")
+//                        NSUserDefaults.standardUserDefaults().setValue(data, forKey: "favplaces")
+                        NSUserDefaults.standardUserDefaults().setValue(data.result.value, forKey: "favplaces")
                     }
                 }
                 self.delay(2.0){
