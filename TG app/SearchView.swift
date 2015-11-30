@@ -116,7 +116,8 @@ class SearchView: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func editing(sender: UITextField) {
-        
+    print("Тут комментировал код")
+        /*
         var JSON:NSMutableArray
         var notificationString:String
         switch pageMenu!.currentPageIndex{
@@ -148,8 +149,7 @@ class SearchView: UIViewController, UITextFieldDelegate {
         if count(sender.text) == 0 {
             NSNotificationCenter.defaultCenter().postNotificationName(notificationString, object: nil, userInfo: ["message":JSON])
         }
-        
-
+*/
         
     }
     override func didReceiveMemoryWarning() {
@@ -221,6 +221,8 @@ class SearchView: UIViewController, UITextFieldDelegate {
     }
     
     func closeSearch(){
+        print("Тут комментировал код")
+        /*
         UIView.animateWithDuration(0.3, animations: {
             var searchB = self.searchButton.frame
             searchB.origin.x += self.searchField.frame.size.width
@@ -255,7 +257,7 @@ class SearchView: UIViewController, UITextFieldDelegate {
             notificationString = "reloadTablePl"
         }
         NSNotificationCenter.defaultCenter().postNotificationName(notificationString, object: nil, userInfo: ["message":JSON])
-        
+     */   
     }
 
     
