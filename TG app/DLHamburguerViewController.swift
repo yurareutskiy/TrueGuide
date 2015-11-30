@@ -116,7 +116,7 @@ class DLHamburguerViewController: UIViewController {
         setupHamburguerViewController()
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupHamburguerViewController()
     }
@@ -130,8 +130,8 @@ class DLHamburguerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hamburguerDisplayController(contentViewController, inFrame: self.view.bounds)
-        self.contentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DLNavigationViewController") as! UIViewController
-        self.menuViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DLMenuViewController") as! UIViewController
+        self.contentViewController = self.storyboard!.instantiateViewControllerWithIdentifier("DLNavigationViewController") as! UIViewController
+        self.menuViewController = self.storyboard!.instantiateViewControllerWithIdentifier("DLMenuViewController") as! UIViewController
     }
 
     override func didReceiveMemoryWarning() {
@@ -237,7 +237,7 @@ class DLHamburguerViewController: UIViewController {
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
         super.didRotateFromInterfaceOrientation(fromInterfaceOrientation)
         if !self.menuVisible { self.actualMenuViewSize = CGSizeZero }
-        adjustMenuSize(forRotation: true)
+        adjustMenuSize(true)
     }
     
     // MARK: - Rotation (iOS 8)
@@ -251,7 +251,7 @@ class DLHamburguerViewController: UIViewController {
             self.containerViewController.setContainerFrame(self.menuViewController.view.frame)
         }, completion: {(finalContext) -> Void in
             if !self.menuVisible { self.actualMenuViewSize = CGSizeZero }
-            self.adjustMenuSize(forRotation: true)
+            self.adjustMenuSize(true)
         })
     }
 

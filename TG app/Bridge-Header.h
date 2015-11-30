@@ -10,9 +10,9 @@
 #define TG_app_Bridge_Header_h
 
 #import <FacebookSDK/FacebookSDK.h>
-#import "LocationPickerView.h"
-#import "SVPulsingAnnotationView.h"
-#import "SWRevealViewController.h"
+//#import "LocationPickerView.h"
+//#import "SVPulsingAnnotationView.h"
+//#import "SWRevealViewController.h"
 #import "CustomizableCamera/Camera View/CameraSessionView.h"
 
 #endif

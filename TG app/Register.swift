@@ -46,7 +46,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
     // Facebook Delegate Methods
     
     func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
-        println("User Logged In" )
+        print("User Logged In" )
         let serverUrl = NSUserDefaults.standardUserDefaults().valueForKey("serverUrl")!
         Alamofire.request(.GET, "http://\(serverUrl)/api/alive").responseJSON() {
             (_, _, data, error) in
@@ -111,18 +111,18 @@ class ViewController: UIViewController, FBLoginViewDelegate {
     }
     
     func loginViewFetchedUserInfo(loginView : FBLoginView! , user: FBGraphUser) {
-        println(user)
+        print(user)
         NSUserDefaults.standardUserDefaults().setValue(user.first_name, forKey: "firstName")
         NSUserDefaults.standardUserDefaults().setValue(user.objectID, forKey: "FBUserID")
         Server().registerFB(user.objectID, firstName: user.first_name, lastName: user.last_name)
         
     }
     func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {
-        println("User Logged Out")
+        print("User Logged Out")
     }
     
     func loginView(loginView : FBLoginView! , handleError:NSError) {
-        println("Error: \(handleError.localizedDescription)")
+        print("Error: \(handleError.localizedDescription)")
     }
 
 
