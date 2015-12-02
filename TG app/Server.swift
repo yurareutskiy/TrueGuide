@@ -13,7 +13,6 @@ import Alamofire
 class Server: NSObject {
     let serverUrl = NSUserDefaults.standardUserDefaults().valueForKey("serverUrl")!
 
-
     func test(){
 
         var JSON:NSMutableArray = NSMutableArray()

@@ -15,15 +15,20 @@ class ViewController: UIViewController, FBLoginViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 
+        print("Register VC")
+        //
         self.fbLoginView.delegate = self
         self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
+
         var obj:AnyObject
         for obj in fbLoginView.subviews
         {
             if (obj.isKindOfClass(UIButton))
             {
                 var loginButton:UIButton = obj as! UIButton
-                //loginButton.frame = CGRectMake(20, 20, 100, 100)
+//                loginButton.frame = CGRectMake(20, 20, 100, 100)
                 loginButton.setBackgroundImage(UIImage(named: "fb")!, forState: UIControlState.Normal)
                 loginButton.setBackgroundImage(UIImage(named: "fb")!, forState: UIControlState.Highlighted)
                 loginButton.setBackgroundImage(UIImage(named: "fb")!, forState: UIControlState.Selected)
@@ -43,8 +48,16 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         
         self.view.addSubview(fbLoginView)
     }
-    // Facebook Delegate Methods
     
+    // MARK: IBActions
+    @IBAction func skipRegistration(sender: UIButton) {
+        print("Skip registration")
+//        let rootMapVC: Map = Map()
+//        self.presentViewController(rootMapVC, animated: true, completion: nil)
+        
+    }
+    
+    // MARK: Facebook Delegate Methods
     func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
         print("User Logged In" )
         let serverUrl = NSUserDefaults.standardUserDefaults().valueForKey("serverUrl")!
