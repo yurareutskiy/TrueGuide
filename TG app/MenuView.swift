@@ -18,6 +18,7 @@ class MenuView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.revealViewController().rearViewRevealWidth = 280
 //        let fbU = NSUserDefaults.standardUserDefaults().valueForKey("FBUserID") as! String
 //        avate.kf_setImageWithURL(NSURL(string: "https://graph.facebook.com/\(fbU)/picture?type=large")!)
 //        avate.layer.cornerRadius = 5
