@@ -440,11 +440,11 @@
 			isa = PBXGroup;
 			children = (
 				1FB219951A65C9E80041D304 /* Register.swift */,
+				60CAF4D31AD7FB8E000E056B /* MenuView.swift */,
 				60D755BA1AD2EF6300562777 /* Map.swift */,
 				607330B71AD404CF008865CB /* MapCell.swift */,
 				607330CB1AD61618008865CB /* FirstCell.swift */,
 				6097630D1AD6C225008065B1 /* OtherCell.swift */,
-				60CAF4D31AD7FB8E000E056B /* MenuView.swift */,
 				602969E91AD8830E00385488 /* ProfileView.swift */,
 				60D44B271ADD743A002CD953 /* ProfileCell.swift */,
 				60D44B291ADD7558002CD953 /* TimelineCell.swift */,

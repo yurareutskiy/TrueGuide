@@ -124,7 +124,6 @@
         <!--Reveal View Controller-->
         <scene sceneID="qIo-VC-71m">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oXL-Oy-ddM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="0be-qj-3nL" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mAX-bY-FL0"/>
@@ -141,6 +140,7 @@
                         <segue destination="RYp-a6-cSP" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="0p6-qf-Cyh"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oXL-Oy-ddM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="522" y="115"/>
         </scene>
@@ -214,10 +214,6 @@
                                     <action selector="menu1:" destination="8vK-R0-pYw" eventType="touchUpInside" id="jfL-14-anp"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placesic.png" translatesAutoresizingMaskIntoConstraints="NO" id="cKV-DA-cER">
-                                <rect key="frame" x="23" y="234" width="20" height="22"/>
-                                <animations/>
-                            </imageView>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPf-Hp-Jm6">
                                 <rect key="frame" x="66" y="364" width="231" height="35"/>
                                 <animations/>
@@ -242,10 +238,6 @@
                                     <action selector="menu1:" destination="8vK-R0-pYw" eventType="touchUpInside" id="TRq-P1-Xfj"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="realityic.png" translatesAutoresizingMaskIntoConstraints="NO" id="v1e-zj-vy9">
-                                <rect key="frame" x="22" y="379" width="22" height="20"/>
-                                <animations/>
-                            </imageView>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLp-4b-Tbw">
                                 <rect key="frame" x="66" y="452" width="193" height="30"/>
                                 <animations/>
@@ -270,10 +262,6 @@
                                     <action selector="menu1:" destination="8vK-R0-pYw" eventType="touchUpInside" id="0sL-QT-52g"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settingsic.png" translatesAutoresizingMaskIntoConstraints="NO" id="kSC-RB-ubB">
-                                <rect key="frame" x="23" y="522" width="22" height="22"/>
-                                <animations/>
-                            </imageView>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0AR-t2-Fj1">
                                 <rect key="frame" x="66" y="300" width="193" height="35"/>
                                 <animations/>
@@ -286,10 +274,6 @@
                                     <action selector="menu1:" destination="8vK-R0-pYw" eventType="touchUpInside" id="Z7v-HA-DEt"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="favoric.png" translatesAutoresizingMaskIntoConstraints="NO" id="tIY-gM-ghX">
-                                <rect key="frame" x="25" y="307" width="17" height="22"/>
-                                <animations/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeH-TL-zsX">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
                                 <animations/>
@@ -300,10 +284,36 @@
                                     <action selector="menu1:" destination="8vK-R0-pYw" eventType="touchUpInside" id="zhJ-GJ-vrC"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mapic.png" translatesAutoresizingMaskIntoConstraints="NO" id="RKu-Lq-SRb">
-                                <rect key="frame" x="25" y="456" width="17" height="22"/>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcZ-VL-t7a">
+                                <rect key="frame" x="16" y="229" width="32" height="32"/>
                                 <animations/>
-                            </imageView>
+                                <color key="tintColor" red="0.0" green="0.58823529411764708" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="directory"/>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3na-a2-Q1h">
+                                <rect key="frame" x="16" y="378" width="32" height="32"/>
+                                <animations/>
+                                <color key="tintColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="reality"/>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYw-hZ-Fty">
+                                <rect key="frame" x="16" y="302" width="32" height="32"/>
+                                <animations/>
+                                <color key="tintColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="bookmarks"/>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUL-Fx-es4">
+                                <rect key="frame" x="18" y="454" width="28" height="28"/>
+                                <animations/>
+                                <color key="tintColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="mymap"/>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Rr-gw-P1C">
+                                <rect key="frame" x="16" y="517" width="32" height="32"/>
+                                <animations/>
+                                <color key="tintColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="settings"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -618,7 +628,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUe-Un-eOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1494" y="-511"/>
+            <point key="canvasLocation" x="1612" y="-613"/>
         </scene>
         <!--Profile View-->
         <scene sceneID="fHa-23-wsp">
@@ -801,7 +811,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="skP-iG-zSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1908" y="-521"/>
+            <point key="canvasLocation" x="2164" y="-597"/>
         </scene>
         <!--Search View-->
         <scene sceneID="bGk-vC-zlV">
@@ -1576,26 +1586,26 @@
         <image name="backCircle.png" width="32" height="32"/>
         <image name="backProfile.png" width="320" height="223"/>
         <image name="background.png" width="640" height="1136"/>
+        <image name="bookmarks" width="25" height="25"/>
         <image name="circle.png" width="15" height="15"/>
         <image name="close.png" width="50" height="50"/>
         <image name="compass.png" width="16" height="17"/>
         <image name="cone.png" width="48" height="47"/>
+        <image name="directory" width="25" height="25"/>
         <image name="dots.png" width="5" height="20"/>
         <image name="fav.png" width="15" height="14"/>
-        <image name="favoric.png" width="18" height="23"/>
         <image name="frame.png" width="256" height="256"/>
         <image name="lamp.png" width="11" height="16"/>
         <image name="locateico.png" width="58" height="58"/>
         <image name="logo.png" width="131" height="126"/>
-        <image name="mapic.png" width="18" height="26"/>
+        <image name="mymap" width="28" height="28"/>
         <image name="photoico.png" width="58" height="58"/>
         <image name="photoicoBot.png" width="58" height="29"/>
-        <image name="placesic.png" width="19" height="21"/>
         <image name="plus.png" width="64" height="65"/>
-        <image name="realityic.png" width="25" height="22"/>
+        <image name="reality" width="25" height="25"/>
         <image name="route.png" width="8" height="15"/>
         <image name="search.png" width="19" height="19"/>
-        <image name="settingsic.png" width="24" height="24"/>
+        <image name="settings" width="26" height="26"/>
         <image name="share.png" width="12" height="13"/>
         <image name="sort.png" width="138" height="95"/>
         <image name="starSmall.png" width="16" height="16"/>

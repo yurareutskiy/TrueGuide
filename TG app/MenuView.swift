@@ -12,7 +12,7 @@ import Kingfisher
 class MenuView: UIViewController {
     
     @IBOutlet var avate: UIImageView!
-    @IBOutlet var uName: UILabel!
+    @IBOutlet var uName: UILabel!    
     
 //    var seguesArray:Array<String> = ["screen1","screen2","screen3","screen4","screen2","screen6"]
 
