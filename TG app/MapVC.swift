@@ -12,7 +12,7 @@ import Alamofire
 import MapKit
 import SWRevealViewController
 
-class Map: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate{
+class MapVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate{
 
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
@@ -35,7 +35,7 @@ class Map: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrol
         super.viewDidLoad()
         
         //
-        print("MAP VC")
+//        print("MAP VC")
         //
         
         if self.revealViewController() != nil {

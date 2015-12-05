@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class MenuView: UIViewController {
+class MenuVC: UIViewController {
     
     @IBOutlet var avate: UIImageView!
     @IBOutlet var uName: UILabel!    
@@ -18,7 +18,11 @@ class MenuView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // SWRevealVC - Menu offset settings
         self.revealViewController().rearViewRevealWidth = 280
+        self.revealViewController().rearViewRevealOverdraw = 40
+
 //        let fbU = NSUserDefaults.standardUserDefaults().valueForKey("FBUserID") as! String
 //        avate.kf_setImageWithURL(NSURL(string: "https://graph.facebook.com/\(fbU)/picture?type=large")!)
 //        avate.layer.cornerRadius = 5
