@@ -57,48 +57,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторезироваться через" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynl-ma-RaR">
-                                <rect key="frame" x="203" y="389" width="196" height="23"/>
-                                <animations/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cb-K4-VbR" userLabel="VK Button">
-                                <rect key="frame" x="172" y="440" width="67" height="67"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="4H3-u3-CeD"/>
-                                    <constraint firstAttribute="height" constant="67" id="l3W-YP-LGT"/>
-                                </constraints>
-                                <state key="normal" image="VKLoginBtn"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbO-qb-3oI" userLabel="FB Button">
-                                <rect key="frame" x="266" y="440" width="67" height="67"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="WnA-kf-iDb"/>
-                                    <constraint firstAttribute="height" constant="67" id="hOs-PI-MQL"/>
-                                </constraints>
-                                <state key="normal" image="FBloginBtn"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaF-f6-PL8" userLabel="Twitter Button">
-                                <rect key="frame" x="361" y="440" width="67" height="67"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="7oY-V7-nJ2"/>
-                                    <constraint firstAttribute="width" constant="67" id="Pfc-JR-IwG"/>
-                                </constraints>
-                                <state key="normal" image="TwitterLoginBtn"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пропустить" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lE3-rH-1ye">
-                                <rect key="frame" x="254" y="541" width="93" height="23"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TG_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="zTv-PM-DQo">
                                 <rect key="frame" x="234" y="28" width="131" height="149"/>
                                 <animations/>
@@ -107,33 +65,83 @@
                                     <constraint firstAttribute="width" constant="131" id="bsk-Lv-ubm"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторезироваться через" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynl-ma-RaR">
+                                <rect key="frame" x="203" y="404" width="195.5" height="22.5"/>
+                                <animations/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cb-K4-VbR" userLabel="VK Button">
+                                <rect key="frame" x="172" y="448" width="67" height="67"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="4H3-u3-CeD"/>
+                                    <constraint firstAttribute="height" constant="67" id="l3W-YP-LGT"/>
+                                </constraints>
+                                <state key="normal" image="VKLoginBtn"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbO-qb-3oI" userLabel="FB Button">
+                                <rect key="frame" x="266" y="448" width="67" height="67"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="WnA-kf-iDb"/>
+                                    <constraint firstAttribute="height" constant="67" id="hOs-PI-MQL"/>
+                                </constraints>
+                                <state key="normal" image="FBloginBtn"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaF-f6-PL8" userLabel="Twitter Button">
+                                <rect key="frame" x="361" y="448" width="67" height="67"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="7oY-V7-nJ2"/>
+                                    <constraint firstAttribute="width" constant="67" id="Pfc-JR-IwG"/>
+                                </constraints>
+                                <state key="normal" image="TwitterLoginBtn"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bP-wN-Nl3">
+                                <rect key="frame" x="253.5" y="540" width="93" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
+                                <state key="normal" title="Пропустить">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Skip_Btn" translatesAutoresizingMaskIntoConstraints="NO" id="f6j-4M-FbV">
+                                <rect key="frame" x="260" y="556" width="80" height="14"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zTv-PM-DQo" firstAttribute="top" secondItem="Zvs-lF-3aw" secondAttribute="bottom" constant="8" id="1vs-xL-3gd"/>
+                            <constraint firstItem="0bP-wN-Nl3" firstAttribute="centerX" secondItem="mif-4K-zgy" secondAttribute="centerX" id="5au-Y6-8LI"/>
                             <constraint firstAttribute="trailing" secondItem="AOq-VV-51m" secondAttribute="trailing" id="8E5-1v-Th6"/>
                             <constraint firstItem="ynl-ma-RaR" firstAttribute="centerX" secondItem="mif-4K-zgy" secondAttribute="centerX" constant="1" id="8Fx-LV-Bxs"/>
+                            <constraint firstItem="noh-UL-P5g" firstAttribute="top" secondItem="0bP-wN-Nl3" secondAttribute="bottom" constant="30" id="Hq3-vg-98E"/>
                             <constraint firstItem="NaF-f6-PL8" firstAttribute="leading" secondItem="vbO-qb-3oI" secondAttribute="trailing" constant="28" id="Jui-c1-FnU"/>
                             <constraint firstItem="vbO-qb-3oI" firstAttribute="leading" secondItem="5cb-K4-VbR" secondAttribute="trailing" constant="27" id="RND-eD-Ewv"/>
                             <constraint firstItem="5cb-K4-VbR" firstAttribute="top" secondItem="NaF-f6-PL8" secondAttribute="top" id="UdT-kE-qUS"/>
                             <constraint firstItem="5cb-K4-VbR" firstAttribute="top" secondItem="vbO-qb-3oI" secondAttribute="top" id="WiI-JD-51A"/>
-                            <constraint firstItem="vbO-qb-3oI" firstAttribute="top" secondItem="ynl-ma-RaR" secondAttribute="bottom" constant="28" id="XLQ-Aj-NQv"/>
-                            <constraint firstItem="lE3-rH-1ye" firstAttribute="centerX" secondItem="mif-4K-zgy" secondAttribute="centerX" id="YtI-lA-tSO"/>
+                            <constraint firstItem="vbO-qb-3oI" firstAttribute="top" secondItem="ynl-ma-RaR" secondAttribute="bottom" constant="21.5" id="XLQ-Aj-NQv"/>
+                            <constraint firstItem="f6j-4M-FbV" firstAttribute="top" secondItem="0bP-wN-Nl3" secondAttribute="bottom" constant="-14" id="Y1K-yx-dQj"/>
                             <constraint firstItem="noh-UL-P5g" firstAttribute="top" secondItem="AOq-VV-51m" secondAttribute="bottom" id="cnI-eu-q67"/>
                             <constraint firstItem="vbO-qb-3oI" firstAttribute="centerX" secondItem="mif-4K-zgy" secondAttribute="centerX" id="e2J-Tf-tNI"/>
-                            <constraint firstItem="noh-UL-P5g" firstAttribute="top" secondItem="lE3-rH-1ye" secondAttribute="bottom" constant="36" id="f1n-Hz-jQU"/>
                             <constraint firstItem="AOq-VV-51m" firstAttribute="leading" secondItem="mif-4K-zgy" secondAttribute="leading" id="fvU-xH-1T2"/>
-                            <constraint firstItem="lE3-rH-1ye" firstAttribute="top" secondItem="vbO-qb-3oI" secondAttribute="bottom" constant="34" id="iok-hx-cge"/>
+                            <constraint firstItem="0bP-wN-Nl3" firstAttribute="top" secondItem="vbO-qb-3oI" secondAttribute="bottom" constant="25" id="nBO-ms-9re"/>
                             <constraint firstItem="AOq-VV-51m" firstAttribute="top" secondItem="mif-4K-zgy" secondAttribute="top" id="nZt-C9-eIo"/>
-                            <constraint firstItem="noh-UL-P5g" firstAttribute="top" secondItem="5cb-K4-VbR" secondAttribute="bottom" constant="93" id="s0o-0j-sDU"/>
+                            <constraint firstItem="noh-UL-P5g" firstAttribute="top" secondItem="5cb-K4-VbR" secondAttribute="bottom" constant="85" id="s0o-0j-sDU"/>
+                            <constraint firstItem="f6j-4M-FbV" firstAttribute="centerX" secondItem="mif-4K-zgy" secondAttribute="centerX" id="sSV-vA-QO9"/>
                             <constraint firstItem="zTv-PM-DQo" firstAttribute="centerX" secondItem="mif-4K-zgy" secondAttribute="centerX" id="vAF-57-EL0"/>
+                            <constraint firstItem="noh-UL-P5g" firstAttribute="top" secondItem="f6j-4M-FbV" secondAttribute="bottom" constant="30" id="wNv-rm-BXo"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mp3-Wr-7uo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-156" y="115"/>
+            <point key="canvasLocation" x="-95" y="185"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="qIo-VC-71m">
@@ -1546,6 +1554,7 @@
     </scenes>
     <resources>
         <image name="FBloginBtn" width="67" height="67"/>
+        <image name="Skip_Btn" width="80" height="14"/>
         <image name="TG_Logo" width="131" height="149"/>
         <image name="TwitterLoginBtn" width="67" height="67"/>
         <image name="VKLoginBtn" width="67" height="67"/>
