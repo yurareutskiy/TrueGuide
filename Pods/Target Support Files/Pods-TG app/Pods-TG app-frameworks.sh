@@ -90,6 +90,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-TG app/PageMenu.framework"
   install_framework "Pods-TG app/SVPulsingAnnotationView.framework"
   install_framework "Pods-TG app/SWRevealViewController.framework"
+  install_framework "Pods-TG app/VK_ios_sdk.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-TG app/Alamofire.framework"
@@ -98,4 +99,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-TG app/PageMenu.framework"
   install_framework "Pods-TG app/SVPulsingAnnotationView.framework"
   install_framework "Pods-TG app/SWRevealViewController.framework"
+  install_framework "Pods-TG app/VK_ios_sdk.framework"
 fi

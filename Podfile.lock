@@ -5,6 +5,7 @@ PODS:
   - PageMenu (1.2.8)
   - SVPulsingAnnotationView (0.3.0)
   - SWRevealViewController (2.3.0)
+  - VK-ios-sdk (1.3.8)
 
 DEPENDENCIES:
   - Alamofire (~> 3.1)
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - PageMenu (~> 1.2)
   - SVPulsingAnnotationView (~> 0.3)
   - SWRevealViewController (~> 2.3)
+  - VK-ios-sdk (~> 1.3)
 
 SPEC CHECKSUMS:
   Alamofire: 9f93b56389e48def9220dd57d1f44b1927229a5a
@@ -21,5 +23,6 @@ SPEC CHECKSUMS:
   PageMenu: 703e82e173f54a4626ab88fcdca7703ee52e0cbe
   SVPulsingAnnotationView: f1a8dc7a57ebb5fa231d0ef8b0da59a250005511
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
+  VK-ios-sdk: 63b3e084eecb1ed2c11ab3ac53f9309164973f9b
 
 COCOAPODS: 0.39.0

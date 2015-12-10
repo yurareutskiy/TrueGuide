@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
         
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+        
         FBLoginView.self
         FBProfilePictureView.self
         NSUserDefaults.standardUserDefaults().setValue("127.0.0.1:8000", forKey: "serverUrl")

@@ -10,6 +10,7 @@ pod 'PageMenu', '~> 1.2'
 pod 'SWRevealViewController', '~> 2.3'
 pod 'SVPulsingAnnotationView', '~> 0.3'
 pod 'LocationPickerView', '~> 1.2'
+pod 'VK-ios-sdk', '~> 1.3'
 
 end
 

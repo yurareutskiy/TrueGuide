@@ -13,12 +13,14 @@ import SVPulsingAnnotationView
 
 class MapCell: UITableViewCell, MKMapViewDelegate, CLLocationManagerDelegate {
 
-    @IBOutlet var locateB: UIButton!
+    @IBOutlet weak var locateB: UIButton!
+    @IBOutlet weak var mapView: MKMapView!
+    
     var didUpdated:Bool = false
     var userLocate:MKUserLocation!
     var location:CLLocationManager = CLLocationManager()
     var user:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-    @IBOutlet var mapView: MKMapView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         mapView.delegate = self

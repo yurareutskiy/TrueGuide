@@ -12,21 +12,21 @@ import Alamofire
 import MapKit
 import SWRevealViewController
 
-class MapVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate{
-
+class MapVC: UITableViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
 //    @IBOutlet var burgerB: UIButton!
-    @IBOutlet var mapView: MKMapView!
+//    @IBOutlet var mapView: MKMapView!
+//    @IBOutlet weak var mapView: MKMapView!
 //    @IBOutlet var topTopView: UIView!
-    @IBOutlet var tableView: UITableView!
+//    @IBOutlet var tableView: UITableView!
 //    @IBOutlet var topView: UIView!
     var opened:Bool = false
     var disappeared:Bool = false
     var titleLa:String = ""
     var adress:String?
     var icon:UIImage?
-    var a:CGFloat!
+//    var a:CGFloat!
     var closeRow: UIButton!
     var user:NSUserDefaults = NSUserDefaults.standardUserDefaults()
     var JSON:NSMutableArray = NSMutableArray()
@@ -35,7 +35,7 @@ class MapVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScr
         super.viewDidLoad()
         
         //
-//        print("MAP VC")
+        print("MAP VC")
         //
         
         if self.revealViewController() != nil {
@@ -43,11 +43,11 @@ class MapVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScr
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+//        tableView.delegate = self
+//        tableView.dataSource = self
+//        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         //tableView.separatorColor = UIColor(white: 1, alpha: 0)
-        tableView.backgroundColor = UIColor(white: 1, alpha: 0)
+//        tableView.backgroundColor = UIColor(white: 1, alpha: 0)
 //        topView.backgroundColor = UIColor(red: 0, green: 150/255, blue: 136/255, alpha: 1)
 //        topTopView.backgroundColor = UIColor(red: 0, green: 121/255, blue: 107/255, alpha: 1)
 //        var reveal:SWRevealViewController = self.revealViewController()
@@ -93,15 +93,18 @@ class MapVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScr
     
     
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return JSON.count + 1
 //        return 50
         return 10
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 70
-        /*
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0
+    }
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//        return 70
+      //  /*
         if opened{
             if indexPath.row == 0 {
                 let screenSize: CGRect = UIScreen.mainScreen().bounds
@@ -125,18 +128,18 @@ class MapVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScr
                     return 70
             }
         }
-*/
+//*/
     }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch indexPath.row{
         case 0:
-            var cell = tableView.dequeueReusableCellWithIdentifier("mapCell") as! MapCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("MapCell") as! MapCell
             cell.backgroundColor = UIColor(white: 1, alpha: 0)
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             return cell
+//            var cell = tableView.dequeueReusableCellWithIdentifier("mapCell") as! MapCell
         case 1:
-            var cell = tableView.dequeueReusableCellWithIdentifier("firstCell") as! FirstCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("firstCell") as! FirstCell
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             cell.clipsToBounds = false
             cell.contentView.clipsToBounds = false
@@ -146,7 +149,7 @@ class MapVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScr
 //            }
             return cell
         default:
-            var cell = tableView.dequeueReusableCellWithIdentifier("nextCell") as! OtherCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("nextCell") as! OtherCell
 //            var fields:NSMutableDictionary = JSON[indexPath.row - 1]["fields"] as! NSMutableDictionary
 //            cell.titleL.text = fields["title"] as? String
             //cell.titleL.text = "Парк Горького #\(indexPath.row)"
@@ -263,9 +266,9 @@ class MapVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScr
     }
     */
     
-    @IBAction func burgerT(sender: AnyObject) {
+//    @IBAction func burgerT(sender: AnyObject) {
 //        self.findHamburguerViewController()?.showMenuViewController()
-    }
+//    }
 //    func scrollViewDidScroll(scrollView: UIScrollView) {
 //        if (scrollView.contentOffset.y < a)
 //        {

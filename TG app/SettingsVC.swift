@@ -23,7 +23,8 @@ class SettingsVC: UIViewController{
         }
         // Navigation Bar
 //        self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.082, green: 0.584, blue: 0.533, alpha: 1)
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:0.59, blue:0.53, alpha:1.0)
+//        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:0.59, blue:0.53, alpha:1.0)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.094118, green:0.584314, blue:0.533333, alpha:1.0)
         self.navigationController?.title = "Настройки"
     }
 
