@@ -13,7 +13,7 @@ import MapKit
 import SWRevealViewController
 
 class MapVC: UITableViewController {
-    
+
     @IBOutlet weak var menuButton: UIBarButtonItem!
 //    @IBOutlet var burgerB: UIButton!
 //    @IBOutlet var mapView: MKMapView!
