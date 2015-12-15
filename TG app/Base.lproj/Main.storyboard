@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Roboto-Light.ttf">
@@ -688,6 +689,14 @@
                         <barButtonItem key="leftBarButtonItem" image="burgerIcon" id="cIz-yv-wdB">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="dotsIcon" id="7nx-p3-rLe">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                            <barButtonItem image="searchIcon" id="97U-jn-6JZ">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="cIz-yv-wdB" id="u6T-vV-YYk"/>
@@ -899,6 +908,14 @@
                         <barButtonItem key="leftBarButtonItem" image="burgerIcon" id="IeM-bz-p3z">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="dotsIcon" id="5pe-xy-aXU">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                            <barButtonItem image="searchIcon" id="cdE-3c-oma">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="IeM-bz-p3z" id="ow3-G8-zzq"/>
@@ -1307,6 +1324,7 @@
         <image name="compass.png" width="16" height="17"/>
         <image name="coneSmall" width="48" height="47"/>
         <image name="directory" width="25" height="25"/>
+        <image name="dotsIcon" width="5" height="20"/>
         <image name="favoriteSmall" width="15" height="14"/>
         <image name="frame.png" width="256" height="256"/>
         <image name="lamp.png" width="11" height="16"/>
@@ -1319,6 +1337,7 @@
         <image name="profilePhoto" width="129" height="129"/>
         <image name="reality" width="25" height="25"/>
         <image name="routeSmall" width="8" height="15"/>
+        <image name="searchIcon" width="19" height="19"/>
         <image name="settings" width="26" height="26"/>
         <image name="shareSmall" width="12" height="13"/>
         <image name="starSmall.png" width="16" height="16"/>
