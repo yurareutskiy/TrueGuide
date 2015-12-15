@@ -34,6 +34,7 @@ class MapCell: UITableViewCell, MKMapViewDelegate, CLLocationManagerDelegate {
         }
         location.startUpdatingLocation()
         mapView.showsUserLocation = true
+        
     }
     
 

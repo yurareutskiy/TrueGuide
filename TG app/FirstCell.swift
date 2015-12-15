@@ -10,9 +10,9 @@ import UIKit
 
 class FirstCell: UITableViewCell {
 
-    @IBOutlet var icon: UIImageView!
-    @IBOutlet var adress: UILabel!
-    @IBOutlet var titleL: UILabel!
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var adress: UILabel!
+    @IBOutlet weak var titleL: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
     }
