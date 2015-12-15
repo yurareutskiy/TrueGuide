@@ -9,16 +9,28 @@
 import UIKit
 import PageMenu
 
-class FavoritesView: UIViewController {
+class BookmarksVC: UIViewController {
 
-    @IBOutlet var placeholderView: UIView!
-    @IBOutlet var topTopView: UIView!
-    @IBOutlet var topView: UIView!
-    var pageMenu : CAPSPageMenu?
-    var JSONPlaces:NSMutableArray = NSUserDefaults.standardUserDefaults().valueForKey("favplaces") as! NSMutableArray
-    var JSONRoutes:NSMutableArray = NSUserDefaults.standardUserDefaults().valueForKey("routes") as! NSMutableArray
+
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+//    @IBOutlet var placeholderView: UIView!
+//    @IBOutlet var topTopView: UIView!
+//    @IBOutlet var topView: UIView!
+
+//    var pageMenu : CAPSPageMenu?
+//    var JSONPlaces:NSMutableArray = NSUserDefaults.standardUserDefaults().valueForKey("favplaces") as! NSMutableArray
+//    var JSONRoutes:NSMutableArray = NSUserDefaults.standardUserDefaults().valueForKey("routes") as! NSMutableArray
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+
+        /*
         topView.backgroundColor = UIColor(red: 0, green: 150/255, blue: 136/255, alpha: 1)
         topTopView.backgroundColor = UIColor(red: 0, green: 121/255, blue: 107/255, alpha: 1)
         // Do any additional setup after loading the view.
@@ -52,6 +64,7 @@ class FavoritesView: UIViewController {
         // or use pageMenu controller in you view hierachy as desired
         self.placeholderView.addSubview(pageMenu!.view)
         // Do any additional setup after loading the view.
+*/
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,10 +77,6 @@ class FavoritesView: UIViewController {
         return UIStatusBarStyle.LightContent
     }
     
-    @IBAction func backB(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
-    }
-
     /*
     // MARK: - Navigation
 
