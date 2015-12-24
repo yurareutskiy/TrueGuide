@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlacesFavorites" customModule="TG_app" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="qXd-UA-dyc" id="aZn-yw-nge"/>
+                <outlet property="tableView" destination="qXd-UA-dyc" id="4r2-lm-CYS"/>
                 <outlet property="view" destination="qXd-UA-dyc" id="v2d-Ss-W7B"/>
             </connections>
         </placeholder>

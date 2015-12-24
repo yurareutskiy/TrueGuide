@@ -936,7 +936,19 @@
                     <view key="view" contentMode="scaleToFill" id="dNo-x0-56a">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYp-zp-5fL">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YYp-zp-5fL" secondAttribute="trailing" id="FbC-f8-a5J"/>
+                            <constraint firstItem="UmE-Fx-VMU" firstAttribute="top" secondItem="YYp-zp-5fL" secondAttribute="bottom" id="Oa1-lC-F5c"/>
+                            <constraint firstItem="YYp-zp-5fL" firstAttribute="top" secondItem="RIz-Ae-WYE" secondAttribute="bottom" id="a8k-vG-jGJ"/>
+                            <constraint firstItem="YYp-zp-5fL" firstAttribute="leading" secondItem="dNo-x0-56a" secondAttribute="leading" id="nhf-gG-Ukx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bookmarks" id="IGH-MN-f5o">
                         <barButtonItem key="leftBarButtonItem" image="burgerIcon" id="P3c-vr-wm0">
@@ -945,6 +957,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="P3c-vr-wm0" id="rsN-fZ-s8g"/>
+                        <outlet property="placeholder" destination="YYp-zp-5fL" id="8PR-gI-Aep"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gl-bR-222" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1046,7 +1059,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNb-ji-HF8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNb-ji-HF8">
                                 <rect key="frame" x="236" y="227" width="129" height="82"/>
                                 <state key="normal" title="Выйти">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1058,6 +1071,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bNb-ji-HF8" firstAttribute="leading" secondItem="aHH-0W-hxk" secondAttribute="leading" constant="236" id="N0Q-x7-aU6"/>
+                            <constraint firstAttribute="trailing" secondItem="bNb-ji-HF8" secondAttribute="trailing" constant="235" id="YHZ-fh-nOc"/>
+                            <constraint firstItem="EFc-f2-B6m" firstAttribute="top" secondItem="bNb-ji-HF8" secondAttribute="bottom" constant="227" id="cJA-Ez-HVK"/>
+                            <constraint firstItem="bNb-ji-HF8" firstAttribute="top" secondItem="k0T-Yx-t3a" secondAttribute="bottom" constant="227" id="jj3-Kp-7C7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="9AE-HY-yOr">
                         <barButtonItem key="leftBarButtonItem" image="burgerIcon" id="N9v-6L-m86">

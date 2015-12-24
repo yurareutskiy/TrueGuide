@@ -39,8 +39,8 @@ class MapCell: UITableViewCell, MKMapViewDelegate, CLLocationManagerDelegate {
     
 
     func mapView(mapView: MKMapView!, didFailToLocateUserWithError error: NSError!) {
-        locateB.setImage(UIImage(named: "locateicoFailed"), forState: UIControlState.Normal)
-        locateB.setImage(UIImage(named: "locateicoFailed"), forState: UIControlState.Selected)
+        locateB.setImage(UIImage(named: "locateIconFailed"), forState: UIControlState.Normal)
+        locateB.setImage(UIImage(named: "locateIconFailed"), forState: UIControlState.Selected)
     }
     
     
