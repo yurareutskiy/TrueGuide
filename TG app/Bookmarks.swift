@@ -13,11 +13,13 @@ class BookmarksVC: UIViewController {
 
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    var pageMenu : CAPSPageMenu?
+    @IBOutlet weak var placeholder: UIView!
 //    @IBOutlet var placeholderView: UIView!
 //    @IBOutlet var topTopView: UIView!
 //    @IBOutlet var topView: UIView!
 
-//    var pageMenu : CAPSPageMenu?
+
 //    var JSONPlaces:NSMutableArray = NSUserDefaults.standardUserDefaults().valueForKey("favplaces") as! NSMutableArray
 //    var JSONRoutes:NSMutableArray = NSUserDefaults.standardUserDefaults().valueForKey("routes") as! NSMutableArray
 
@@ -29,44 +31,53 @@ class BookmarksVC: UIViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-
-        /*
-        topView.backgroundColor = UIColor(red: 0, green: 150/255, blue: 136/255, alpha: 1)
-        topTopView.backgroundColor = UIColor(red: 0, green: 121/255, blue: 107/255, alpha: 1)
-        // Do any additional setup after loading the view.
+        setTopPageMenu()
+    }
+    
+    func setTopPageMenu() {
         // Array to keep track of controllers in page menu
         var controllerArray : [UIViewController] = []
-        
         // Create variables for all view controllers you want to put in the
         // page menu, initialize them, and add each to the controller array.
         // (Can be any UIViewController subclass)
         // Make sure the title property of all view controllers is set
         // Example:
-        var controller : PlacesFavorites = PlacesFavorites(nibName: "PlacesFavorites", bundle: nil)
+        var controller : UIViewController = UIViewController(nibName: "PlacesFavorites", bundle: nil)
         controller.title = "Места"
         controllerArray.append(controller)
         
-        var controller2 : RoutesFavorites = RoutesFavorites(nibName: "RoutesFavorites", bundle: nil)
-        controller2.title = "Маршруты"
-        controllerArray.append(controller2)
-        
+//        var controller2 : RoutesFavorites = RoutesFavorites(nibName: "RoutesFavorites", bundle: nil)
+//        controller2.title = "Маршруты"
+//        controllerArray.append(controller2)
+
         // Customize page menu to your liking (optional) or use default settings by sending nil for 'options' in the init
         // Example:
-        var parameters: [String: AnyObject] = ["menuItemSeparatorWidth": 0,
-            "useMenuLikeSegmentedControl": true,
-            "menuItemSeparatorPercentageHeight": 0,
-            "scrollMenuBackgroundColor": UIColor(red: 0, green: 150/255, blue: 136/255, alpha: 1),
-            "selectionIndicatorColor": UIColor(red: 253/255, green: 192/255, blue: 46/255, alpha: 1),
-            "unselectedMenuItemLabelColor": UIColor(white: 1, alpha: 0.5)]
+//========================================================
+        var parameters: [CAPSPageMenuOption] = [
+            .MenuItemSeparatorWidth(0),
+            .UseMenuLikeSegmentedControl(true),
+            .MenuItemSeparatorPercentageHeight(0)
+        ]
         // Initialize page menu with controller array, frame, and optional parameters
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.placeholderView.frame.height), options: parameters)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, placeholder.frame.width, placeholder.frame.height), pageMenuOptions: parameters)
+        
         // Lastly add page menu as subview of base view controller view
         // or use pageMenu controller in you view hierachy as desired
-        self.placeholderView.addSubview(pageMenu!.view)
-        // Do any additional setup after loading the view.
-*/
-    }
+        self.placeholder.addSubview(pageMenu!.view)
 
+
+//            "scrollMenuBackgroundColor": UIColor(red: 0, green: 150/255, blue: 136/255, alpha: 1),
+//            "selectionIndicatorColor": UIColor(red: 253/255, green: 192/255, blue: 46/255, alpha: 1),
+//            "unselectedMenuItemLabelColor": UIColor(white: 1, alpha: 0.5)]
+      
+        // Initialize page menu with controller array, frame, and optional parameters
+//        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, PlacesFavoritesCell().frame.height), options: parameters)
+        // Lastly add page menu as subview of base view controller view
+        // or use pageMenu controller in you view hierachy as desired
+//        self.placeholderView.addSubview(pageMenu!.view)
+        // Do any additional setup after loading the view.
+//========================================================
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

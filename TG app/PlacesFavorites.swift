@@ -9,10 +9,12 @@
 import UIKit
 
 class PlacesFavorites: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var JSONPlaces:NSMutableArray = NSUserDefaults.standardUserDefaults().valueForKey("favplaces") as! NSMutableArray
+//    var JSONPlaces:NSMutableArray = NSUserDefaults.standardUserDefaults().valueForKey("favplaces") as! NSMutableArray
+
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.redColor()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.registerNib(UINib(nibName: "PlacesFavoritesCell", bundle: nil), forCellReuseIdentifier: "PlacesFavoritesCell")
@@ -29,13 +31,14 @@ class PlacesFavorites: UIViewController, UITableViewDelegate, UITableViewDataSou
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: PlacesFavoritesCell = tableView.dequeueReusableCellWithIdentifier("PlacesFavoritesCell") as!PlacesFavoritesCell
         cell.backgroundColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1)
-        var fields:NSMutableDictionary = JSONPlaces[indexPath.row]["fields"] as! NSMutableDictionary
-        cell.title.text = fields["title"] as? String
+//        var fields:NSMutableDictionary = JSONPlaces[indexPath.row]["fields"] as! NSMutableDictionary
+//        cell.title.text = fields["title"] as? String
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return JSONPlaces.count
+        return 3
+//        return JSONPlaces.count
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

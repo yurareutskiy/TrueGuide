@@ -10,9 +10,10 @@ import UIKit
 
 class PlacesFavoritesCell: UITableViewCell {
 
-    @IBOutlet var logo: UIImageView!
-    @IBOutlet var address: UILabel!
-    @IBOutlet var title: UILabel!
+    
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var address: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
