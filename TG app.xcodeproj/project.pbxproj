@@ -96,7 +96,6 @@
 		60F85C4F1AE95D320030981E /* CameraStyleKitClass.h in Sources */ = {isa = PBXBuildFile; fileRef = 60F85C4E1AE95D320030981E /* CameraStyleKitClass.h */; };
 		60F85C511AE95D350030981E /* CaptureSessionManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 60F85C501AE95D350030981E /* CaptureSessionManager.h */; };
 		60F85C531AE95D380030981E /* Constants.h in Sources */ = {isa = PBXBuildFile; fileRef = 60F85C521AE95D380030981E /* Constants.h */; };
-		A299BF981C148E6B007975E3 /* IMG_0261.JPG in Resources */ = {isa = PBXBuildFile; fileRef = A299BF971C148E6B007975E3 /* IMG_0261.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,7 +204,6 @@
 		60F85C4E1AE95D320030981E /* CameraStyleKitClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CameraStyleKitClass.h; path = "CustomizableCamera/Graphical Assets/UI Assets/CameraStyleKitClass.h"; sourceTree = "<group>"; };
 		60F85C501AE95D350030981E /* CaptureSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CaptureSessionManager.h; path = "CustomizableCamera/Model Classes/CaptureSessionManager.h"; sourceTree = "<group>"; };
 		60F85C521AE95D380030981E /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "CustomizableCamera/Model Classes/Constants.h"; sourceTree = "<group>"; };
-		A299BF971C148E6B007975E3 /* IMG_0261.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0261.JPG; sourceTree = "<group>"; };
 		A2C564791C0F882A00119FE9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		AEB942A6ABB98BB8D6F0CA63 /* Pods_TG_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TG_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6BFD411101BE7093C23238 /* Pods-TG app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TG app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TG app/Pods-TG app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -274,7 +272,6 @@
 		1FB2198E1A65C9E80041D304 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A299BF971C148E6B007975E3 /* IMG_0261.JPG */,
 				1FB2199A1A65C9E80041D304 /* Images.xcassets */,
 				1FB219921A65C9E80041D304 /* TG_app.xcdatamodeld */,
 				1FB21BA11A65FC580041D304 /* Bridge-Header.h */,
@@ -582,7 +579,6 @@
 				1FB2199B1A65C9E80041D304 /* Images.xcassets in Resources */,
 				602969F11AD9805000385488 /* circle@2x.png in Resources */,
 				6074AE271ADF87DE004D5F5C /* SearchCategoriesCell.xib in Resources */,
-				A299BF981C148E6B007975E3 /* IMG_0261.JPG in Resources */,
 				602969F21AD9805000385488 /* plus@2x.png in Resources */,
 				600DF1871ADE5F7F0085BAA5 /* SearchPlacesCell.xib in Resources */,
 				6074AE371AE0E698004D5F5C /* PlacesFavoritesCell.xib in Resources */,
